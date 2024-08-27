@@ -36,7 +36,6 @@ Las vocales son reemplazadas de la siguiente manera:
 - **HTML5**: Estructura del contenido.
 - **CSS3**: Diseño y estilo visual.
 - **JavaScript**: Lógica de encriptación y desencriptación.
-- **SweetAlert**: Ventanas emergentes para mensajes interactivos.
 
 ## 💻 Instrucciones de Uso
 
