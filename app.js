@@ -11,13 +11,14 @@ let textoCifrado = texto
 
     if (texto.length != 0) {
         document.getElementById("input").value = textoCifrado;
-        asignarTextoElemento('titulo','El texto ha sido encriptado con éxito');
+        asignarTextoElemento('titulo','');
         asignarTextoElemento('parrafo', textoCifrado);
         document.getElementById("brodie").style.display = "none";
 
       } else {
         asignarTextoElemento('titulo','Ningún mensaje fue encontrado');
         asignarTextoElemento('parrafo','Ingresa el texto que deseas encriptar o desencriptar');
+        document.getElementById("brodie").style.display = "inline";
         alert("Debes ingresar un texto");
       }
 }
@@ -34,11 +35,14 @@ function desencriptar() {
   
     if (texto.length != 0) {
       document.getElementById("input").value = textoCifrado;
-      asignarTextoElemento('titulo','Texto desencriptado con éxito');
+      asignarTextoElemento('titulo','');
       asignarTextoElemento('parrafo', textoCifrado);
+      document.getElementById("brodie").style.display = "none";
+
     } else {
       asignarTextoElemento('titulo','Ningún mensaje fue encontrado');
       asignarTextoElemento('parrafo','Ingresa el texto que deseas encriptar o desencriptar');
+      document.getElementById("brodie").style.display = "inline";
       alert("Debes ingresar un texto");
     }
 }

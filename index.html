@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
     <header class="header">
         <img src="assets/Logo.png" alt="Alura icon">
@@ -14,10 +16,13 @@
         <div class="contenido__criptar">
             <textarea id="input" placeholder="Ingrese el texto aqui..." class="contenido__criptar__input"></textarea>
             <div class="contenido__criptar__texto">
-            <!--<img src="assets/icon.png" alt="a">-->
-                <p>Solo letras minúsculas y sin acentos</p></div>
-            <button class="contenido__criptar__boton" onclick="encriptar()" type="button">Encriptar</button>
-            <button class="contenido__criptar__boton__alternativo" onclick="desencriptar()">Desencriptar</button>
+                <!--<img src="assets/icon.png" alt="a">-->
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="contenido__criptar__botones">
+                <button class="contenido__criptar__boton" onclick="encriptar()" type="button">Encriptar</button>
+                <button class="contenido__criptar__boton__alternativo" onclick="desencriptar()">Desencriptar</button>
+            </div>
         </div>
         <div class="contenido__encriptado">
             <img class="contenido__encriptado__img" src="assets/Muñeco.png" alt="Brodie con una lupa" id="brodie">
@@ -27,4 +32,5 @@
     </main>
     <script src="app.js"></script>
 </body>
+
 </html>
