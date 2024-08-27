@@ -14,12 +14,16 @@ let textoCifrado = texto
         asignarTextoElemento('titulo','');
         asignarTextoElemento('parrafo', textoCifrado);
         document.getElementById("brodie").style.display = "none";
-
+        document.getElementById("copiar-btn").style.display = "block";
+        
+        
       } else {
         asignarTextoElemento('titulo','Ningún mensaje fue encontrado');
         asignarTextoElemento('parrafo','Ingresa el texto que deseas encriptar o desencriptar');
         document.getElementById("brodie").style.display = "inline";
+        document.getElementById("copiar-btn").style.display = "none";
         alert("Debes ingresar un texto");
+        
       }
 }
 
@@ -38,11 +42,13 @@ function desencriptar() {
       asignarTextoElemento('titulo','');
       asignarTextoElemento('parrafo', textoCifrado);
       document.getElementById("brodie").style.display = "none";
+      document.getElementById("copiar-btn").style.display = "block";
 
     } else {
       asignarTextoElemento('titulo','Ningún mensaje fue encontrado');
       asignarTextoElemento('parrafo','Ingresa el texto que deseas encriptar o desencriptar');
       document.getElementById("brodie").style.display = "inline";
+      document.getElementById("copiar-btn").style.display = "none";
       alert("Debes ingresar un texto");
     }
 }
@@ -50,4 +56,10 @@ function asignarTextoElemento(elemento, texto) {
   let elementoHTML = document.getElementById(elemento);
   elementoHTML.innerHTML = texto;
   return;
+}
+
+function copiar(){
+  let texto = document.getElementById("parrafo").textContent;
+  console.log(texto);
+  navigator.clipboard.writeText(texto)
 }
