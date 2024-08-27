@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 :root{
-    --first-color: #0A3871;
-    --second-color: #E9ECF8;
-    --third-color: #697565;
+    --first-color: #0F2C59;
+    --second-color: #EADBC8;
+    --third-color: #DAC0A3;
+    --hover-color: #F8F0E5;
 
     --audiowidefont: "Audiowide", sans-serif;
 
@@ -28,13 +29,13 @@ body{
     display: flex;
     justify-content: space-between;
     font-family: var(--audiowidefont);
-    border: 2px blue;
     padding: 1% 10%;
 
 }
 
 .contenido__criptar{
     width: 50%;
+    height: 60rem;
     padding-top: 5%;
 }
 
@@ -63,6 +64,7 @@ body{
 .contenido__criptar__texto{
     justify-content: flex-start;
     flex-direction: row;
+    padding: 2%;
 
 }
 
@@ -73,8 +75,12 @@ body{
     background-color: var(--first-color);
     font-family: var(--audiowidefont);
     font-size: 1rem;
+    border: none;
 }
+.contenido__criptar__boton:hover{
+    background-color: var(--hover-color);
 
+}
 .contenido__criptar__boton__alternativo{
     background-color: var(--third-color);
     width: 328px;
@@ -82,19 +88,30 @@ body{
     border-radius: 24px;
     font-family: var(--audiowidefont);
     font-size: 1rem;
+    border: none;
 }
-.contenido__criptar__boton__alternativo :hover{
-    background-color: yellow;
+.contenido__criptar__boton__alternativo:hover{
+    background-color:var(--hover-color);
 }
 
 .contenido__encriptado{
     background-color: var(--third-color);
-    width: 400px;
-    height: 944px;
+    width: 30%;
+    height: 40rem;
     text-align: center;
     padding: 5% 2%;
     border-radius: 32px;
 }
 
+.contenido__encriptado p{
+    padding: 3%;
+    font-size: 1rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    overflow: hidden;
+}
 
+.contenido__encriptado__img{
+     top: 2%;
+}
 

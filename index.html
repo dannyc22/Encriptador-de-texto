@@ -14,14 +14,13 @@
         <div class="contenido__criptar">
             <textarea id="input" placeholder="Ingrese el texto aqui..." class="contenido__criptar__input"></textarea>
             <div class="contenido__criptar__texto">
-                <img src="assets/icon.png" alt="a">
+            <!--<img src="assets/icon.png" alt="a">-->
                 <p>Solo letras minúsculas y sin acentos</p></div>
             <button class="contenido__criptar__boton" onclick="encriptar()" type="button">Encriptar</button>
-            <button class="contenido__criptar__boton__alternativo">Desencriptar</button>
-            <button>aieru</button>
+            <button class="contenido__criptar__boton__alternativo" onclick="desencriptar()">Desencriptar</button>
         </div>
         <div class="contenido__encriptado">
-            <img src="assets/Muñeco.png" alt="Brodie con una lupa">
+            <img class="contenido__encriptado__img" src="assets/Muñeco.png" alt="Brodie con una lupa" id="brodie">
             <h1 id="titulo">Ningún mensaje fue encontrado</h1>
             <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
         </div>

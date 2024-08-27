@@ -1,23 +1,49 @@
 function encriptar(){
     
-let texto = document.getElementById("texto").value;
-let titulo = document.getElementById("titulo");
-let parrafo = document.getElementById("parrafo");
+let texto = document.getElementById("input").value;
 
 let textoCifrado = texto
-    .replace(/a/gi, "ai")
-    .replace(/e/gi, "enter")
-    .replace(/i/gi, "imes")
-    .replace(/o/gi, "ober")
-    .replace(/u/gi, "ufat")
+.replace(/e/gi, "enter")
+.replace(/i/gi, "imes")
+.replace(/a/gi, "ai")
+.replace(/o/gi, "ober")
+.replace(/u/gi, "ufat");
 
     if (texto.length != 0) {
-        document.getElementById("texto").value = textoCifrado;
-        titulo.textContent = "El texto ha sido encriptado con éxito";
-        parrafo.textContent = textoCifrado;
+        document.getElementById("input").value = textoCifrado;
+        asignarTextoElemento('titulo','El texto ha sido encriptado con éxito');
+        asignarTextoElemento('parrafo', textoCifrado);
+        document.getElementById("brodie").style.display = "none";
+
       } else {
-        titulo.textContent = "Ningún mensaje fue encontrado";
-        parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-        swal("Ooops!", "Debes ingresar un texto", "warning");
+        asignarTextoElemento('titulo','Ningún mensaje fue encontrado');
+        asignarTextoElemento('parrafo','Ingresa el texto que deseas encriptar o desencriptar');
+        alert("Debes ingresar un texto");
       }
+}
+
+function desencriptar() {
+  let texto = document.getElementById("input").value;
+
+  let textoCifrado = texto
+  .replace(/enter/gi, "e")
+  .replace(/imes/gi, "i")
+  .replace(/ai/gi, "a")
+  .replace(/ober/gi, "o")
+  .replace(/ufat/gi, "u");
+  
+    if (texto.length != 0) {
+      document.getElementById("input").value = textoCifrado;
+      asignarTextoElemento('titulo','Texto desencriptado con éxito');
+      asignarTextoElemento('parrafo', textoCifrado);
+    } else {
+      asignarTextoElemento('titulo','Ningún mensaje fue encontrado');
+      asignarTextoElemento('parrafo','Ingresa el texto que deseas encriptar o desencriptar');
+      alert("Debes ingresar un texto");
+    }
+}
+function asignarTextoElemento(elemento, texto) {
+  let elementoHTML = document.getElementById(elemento);
+  elementoHTML.innerHTML = texto;
+  return;
 }
