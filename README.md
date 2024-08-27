@@ -40,16 +40,25 @@ Las vocales son reemplazadas de la siguiente manera:
 
 ## 💻 Instrucciones de Uso
 
+### Opción 1: Ejecutar Localmente
+
 1. Clona este repositorio:
 
     ```bash
-    git clone https://github.com/dannyc22/encriptador-de-texto.git
+    git clone https://github.com/tuusuario/encriptador-de-texto.git
     ```
 
 2. Abre el archivo `index.html` en tu navegador.
 
 3. ¡Listo! Comienza a encriptar y desencriptar mensajes.
 
+### Opción 2: Visualizar en la Nube
+
+El proyecto está desplegado en Vercel. Puedes acceder a la aplicación directamente desde el siguiente enlace:
+
+[🔗 Encriptador de Texto en Vercel](https://encriptador-de-texto-hbxfw9x44-daniels-projects-0a8bd8c1.vercel.app/)
+
 ## 👨‍💻 Autor
 
 Desarrollado por [Lienick](https://github.com/dannyc22).
+
